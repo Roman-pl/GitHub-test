@@ -5,10 +5,10 @@ jobs: # список комнад
         runs-on: ubuntu-latest # - oc
         steps: # список того что надо сделать 
           - name: Hello # название шага 
-            run: echo "Hello World" #и что делать 
-          - name: Check out repository code
+            run: echo "Hello World" #и что делать
           - name: Install the dependecies
-            run: pip3 Install pyinstaller
+            run: pip3 Install pyinstaller            
+          - name: Check out repository code
             uses: actions/checkout@v2
           - name: Run the tests
             run: python3 test.py
