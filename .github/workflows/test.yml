@@ -7,7 +7,17 @@ jobs: # список комнад
           - name: Hello # название шага 
             run: echo "Hello World" #и что делать 
           - name: Check out repository code
+          - name: Install the dependecies
+            run: pip3 Install pyinstaller
             uses: actions/checkout@v2
           - name: Run the tests
             run: python3 test.py
+          - name: Build the excutable
+            run: pyinstaller --windowed --onefile gui.py
+          - name: Upload gui-linux
+            uses: actions/upload-artifact@v2
+            with:
+                name: gui-linux
+                path: dist/gui
+            
         
