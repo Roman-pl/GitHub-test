@@ -7,7 +7,7 @@ jobs: # список комнад
           - name: Hello # название шага 
             run: echo "Hello World" #и что делать
           - name: Install the dependecies
-            run: pip3 Install pyinstaller            
+            run: pip3 install pyinstaller            
           - name: Check out repository code
             uses: actions/checkout@v2
           - name: Run the tests
