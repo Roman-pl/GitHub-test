@@ -6,4 +6,8 @@ jobs: # список комнад
         steps: # список того что надо сделать 
           - name: Hello # название шага 
             run: echo "Hello World" #и что делать 
+          - name: Check out repository code
+            uses: actions/checkout@v2
+          - name: Run the tests
+            run: python3 test.py
         
