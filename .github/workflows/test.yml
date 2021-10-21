@@ -1,0 +1,9 @@
+name : Hello World
+on: [push] #когда запускаем 
+jobs: # список комнад 
+    hello: # название job
+        runs-on: ubuntu-latest # - oc
+        steps: # список того что надо сделать 
+          - name: Hello # название шага 
+            run: echo "Hello World" #и что делать 
+        
